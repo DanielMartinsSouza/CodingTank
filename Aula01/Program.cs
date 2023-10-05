@@ -8,7 +8,6 @@
             Exercicio02();
             Exercicio03();
             Exercicio04();
-
             //Console.WriteLine("Digite o seu nome: ");
             //string name = Console.ReadLine();
             //Console.WriteLine("Digite o sua idade: ");
