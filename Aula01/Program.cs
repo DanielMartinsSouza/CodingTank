@@ -26,6 +26,7 @@
                 int multiplicacao = number01 * number02;
                 int divisao = number01 / number02;
 
+
                 Console.WriteLine($"Adição: {number01} + {number02} = {adicao}");
                 Console.WriteLine($"Subtração: {number01} - {number02} = {subtracao}");
                 Console.WriteLine($"Multiplicação: {number01} * {number02} = {multiplicacao}");
@@ -48,12 +49,14 @@
             {
                 Console.WriteLine("1° Insira o valor total da conta");
                 Console.WriteLine("2° Insira o a porcentagem da gorjeta que desejar dar (Ex: 20% = 20)");
-                int conta = int.Parse(Console.ReadLine());
-                int gorjeta = int.Parse(Console.ReadLine());
+                float conta = float.Parse(Console.ReadLine());
+                float gorjeta = float.Parse(Console.ReadLine());
 
-                int contaTotal = conta + ((conta*gorjeta)/100);
+                float contaTotal = conta + (conta*(gorjeta/100));
+                float gorjetaValor = (conta * (gorjeta / 100));
 
-                Console.WriteLine($"O valor total da conta é {contaTotal}");
+                Console.WriteLine($"O valor gorjeta é {gorjetaValor:F2}");
+                Console.WriteLine($"O valor total da conta é {contaTotal:F2}");
             }
 
             void Exercicio04()
@@ -65,8 +68,8 @@
                 double dolar = real / 5.50;
                 double euro = real / 6.50;
 
-                Console.WriteLine($"{real} equivale a {dolar} dólares");
-                Console.WriteLine($"{real} equivale a {euro} euros");
+                Console.WriteLine($"{real} equivale a {dolar:F2} dólares");
+                Console.WriteLine($"{real} equivale a {euro:F2} euros");
             }
 
         }
