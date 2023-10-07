@@ -2,7 +2,7 @@
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             Exercicio01();
             Exercicio02();

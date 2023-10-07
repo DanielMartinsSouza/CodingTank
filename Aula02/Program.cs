@@ -5,15 +5,15 @@ namespace Aula02
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            Exercicio05();
-            Exercicio06();
-            Exercicio07();
-            Exercicio08();
-            Exercicio09();
+            //Exercicio05();
+            //Exercicio06();
+            //Exercicio07();
+            //Exercicio08();
+            //Exercicio09();
             Exercicio10();
-            Exercicio11();
+            //Exercicio11();
 
             //string minhaString;
             //string minhaString2;
@@ -86,12 +86,12 @@ namespace Aula02
                     {
                         fishWeigthmax =+ fishWeigth - 50;
                         pay =+ fishWeigthmax * 4;
-                        Console.WriteLine($"Seu peixe esta com excesso de {fishWeigthmax} quilos");
+                        Console.WriteLine($"Seu peixe esta com excesso de {fishWeigthmax:F2} quilos");
                         Console.WriteLine($"Sua multa é de R$:{pay}");
                     }
                     else
                     {
-                        Console.WriteLine($"Seu peixe esta com excesso de {fishWeigthmax} quilos");
+                        Console.WriteLine($"Seu peixe esta com excesso de {fishWeigthmax:F2} quilos");
                         Console.WriteLine($"Sua multa é de R$:{pay}");
                     }                    
                 }
@@ -189,8 +189,8 @@ namespace Aula02
                 Console.WriteLine($"Código do produto: {productCode}");
                 Console.WriteLine($"Produto: {productName}");
                 Console.WriteLine($"Quantidade: {amount}");
-                Console.WriteLine($"Valor do produto: {productValue}");
-                Console.WriteLine($"Valor total da venda: {sell}");
+                Console.WriteLine($"Valor do produto: {productValue:F2}");
+                Console.WriteLine($"Valor total da venda: {sell:F2}");
 
             }
         
@@ -205,6 +205,11 @@ namespace Aula02
                     {
                         Console.WriteLine("Insira a nota da primeira prova");
                         proof1 = float.Parse(Console.ReadLine());
+                        while(proof1 < 0 || proof1 > 10)
+                        {
+                            Console.WriteLine("Insira a nota entre 1 a 10");
+                            proof1 = float.Parse(Console.ReadLine());
+                        }
                         proof1Bool = false;
                     }catch (Exception ex)
                     {
@@ -218,6 +223,11 @@ namespace Aula02
                     {
                         Console.WriteLine("Insira a nota da segunda prova");
                         proof2 = float.Parse(Console.ReadLine());
+                        while (proof2 < 0 || proof2 > 10)
+                        {
+                            Console.WriteLine("Insira a nota entre 1 a 10");
+                            proof2 = float.Parse(Console.ReadLine());
+                        }
                         proof2Bool = false;
                     }
                     catch (Exception ex)
@@ -232,6 +242,11 @@ namespace Aula02
                     {
                         Console.WriteLine("Insira a nota da terceira prova");
                         proof3 = float.Parse(Console.ReadLine());
+                        while (proof3 < 0 || proof3 > 10)
+                        {
+                            Console.WriteLine("Insira a nota entre 1 a 10");
+                            proof3 = float.Parse(Console.ReadLine());
+                        }
                         proof3Bool = false;
                     }
                     catch (Exception ex)
@@ -243,7 +258,7 @@ namespace Aula02
                 approved = (proof1 + proof2 + proof3)/3;
                 if (approved >= 7)
                 {
-                    Console.WriteLine($"Você foi aprovado com média {approved}");
+                    Console.WriteLine($"Você foi aprovado com média {approved:F2}");
                 }
                 else
                 {
@@ -267,6 +282,7 @@ namespace Aula02
                         Console.WriteLine("2 - Desenvolvimento de sistema em C#");
                         Console.WriteLine("3 - Processamento de imagem com python");
                         Console.WriteLine("4 - Desenvolvimento mobile com flutter");
+                        Console.WriteLine("Insira um numero de 1 a 4");
                         optionCourse = int.Parse(Console.ReadLine());
 
                         while (optionCourse <= 0 || optionCourse > 4)
@@ -362,7 +378,7 @@ namespace Aula02
                  
                 }
 
-                if (reverse == word && reverse == "")
+                if (reverse == word && reverse != null)
                 {
                     Console.WriteLine($"Essa palavra é palíndroma pois {word} = {reverse}");
                 }
@@ -425,10 +441,10 @@ namespace Aula02
                     wageIncrease = nexWage - wage;
                 }
 
-                Console.WriteLine($"Salarios antes do reajuste R${wage}");
+                Console.WriteLine($"Salarios antes do reajuste R${wage:F2}");
                 Console.WriteLine($"Percentual de aumento {percentageIncrease}%");
-                Console.WriteLine($"Valor do aumento {wageIncrease}");
-                Console.WriteLine($"Novo salario, após aumento é R${nexWage}");
+                Console.WriteLine($"Valor do aumento R${wageIncrease:F2}");
+                Console.WriteLine($"Novo salario, após aumento é R${nexWage:F2}");
             }
         }       
     }
