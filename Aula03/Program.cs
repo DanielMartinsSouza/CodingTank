@@ -8,6 +8,7 @@
             //Exercicio02();
             //Exercicio03();
             //Exercicio04();
+            Teste2();
 
             //RunDicionario();
             //RunMatriz();
@@ -63,9 +64,9 @@
     
         static void Exercicio01()
         {
-            int[] vetor1, vetor2, vetor3 = new int[3];
+            float[] vetor1, vetor2, vetor3 = new float[10];
 
-            vetor1 = new int[10];
+            vetor1 = new float[10];
             for (int i = 0; i < vetor1.Length; i++)
             {
                 int contador = i;
@@ -74,7 +75,7 @@
                     try
                     {
                         Console.WriteLine($"Insira um numero para o indice {i} para o vetor1");
-                        vetor1[i] = int.Parse(Console.ReadLine());
+                        vetor1[i] = float.Parse(Console.ReadLine());
                         break;
                     }
                     catch
@@ -84,7 +85,7 @@
                 }
             }
 
-            vetor2 = new int[10];
+            vetor2 = new float[10];
             for (int i = 0; i < vetor2.Length; i++)
             {
                 int contador = i;
@@ -93,7 +94,7 @@
                     try
                     {
                         Console.WriteLine($"Insira um numero para o indice {i} para o vetor2");
-                        vetor2[i] = int.Parse(Console.ReadLine());
+                        vetor2[i] = float.Parse(Console.ReadLine());
                         break;
                     }
                     catch
@@ -103,14 +104,14 @@
                 }
             }
 
-            vetor3[0] = vetor1[1] + vetor2[9];
-            vetor3[1] = vetor1[2] + vetor2[9];
-            vetor3[2] = vetor1[3] + vetor2[8];
-
             for (int i = 0;i < vetor3.Length; i++)
             {
-                Console.WriteLine($"O valor do vetor{i} é {vetor3[i]}");
+                vetor3[i] = vetor1[i] + vetor2[vetor3.Length - (i+1)];
+                Console.WriteLine($"O valor do vetor3 no indice{i} é {vetor3[i]:F2}");
             }
+           
+
+            
         }
     
         static void Exercicio02()
@@ -125,7 +126,7 @@
                 {
                     try
                     {
-                        Console.WriteLine($"Insira um o valor {i}");
+                        Console.WriteLine($"Insira um numero para o vetor no indice {i}");
                         number[i] = int.Parse(Console.ReadLine());
                         break;
                     }
@@ -149,8 +150,8 @@
 
             average = sum / 10;
             Console.WriteLine($"Média dos valores do vetor é {average:F2}");
-            Console.WriteLine($"A soma de todos valores é {sum}");
-            Console.WriteLine($"O menor numero do vetor é {minNumber}");
+            Console.WriteLine($"A soma de todos valores é {sum:F2}");
+            Console.WriteLine($"O menor numero do vetor é {minNumber:F2}");
         }
     
         static void Exercicio03()
@@ -165,7 +166,7 @@
     
         static void Exercicio04()
         {
-            int numberRead = 0, sum = 0, i = 1;
+            int numberRead = 0, sum = 0, i = 1, parNumber = 0;
             string par = "";
 
             while(i != 0){
@@ -179,12 +180,14 @@
                     {
                         if (i == 0) 
                         {
-                            continue;
+                            break;
                         }
                         else
                         {
+                            parNumber++;
                             par = $"{par}{i}, ";
-                        }
+                            
+                        }                        
                     }
                 }
                 catch
@@ -192,9 +195,68 @@
                    Console.WriteLine("Insira um valor numerico");
                 }                
             }
+            numberRead = numberRead - 1;
             Console.WriteLine($"Foram lidos {numberRead} lidos");
             Console.WriteLine($"A soma de todos os numeros lidos é {sum}");
+            Console.WriteLine($"São pares {parNumber} numeros");
             Console.WriteLine($"São pares os seguintes numeros: {par}");
+        }
+
+        static void Teste()
+        {
+            while (true)
+            {
+                //Declaração das variáveis
+                int numero = 0, pares = 0;
+                int[] lista = new int[0];
+
+                //Apresentação no Console
+                Console.WriteLine("--------Desafio 15--------");
+
+                while (numero == 0)
+                {
+                    Console.WriteLine("A lista de números está vazia. Digite um número diferente de zero: ");
+                    if (int.TryParse(Console.ReadLine(), out numero) == false)
+                    {
+                        Console.WriteLine("São aceitos apenas números inteiros");
+                        continue;
+                    }
+                    else
+                    {
+                        Array.Resize(ref lista, lista.Length + 1);
+                        lista[lista.Length - 1] = numero;
+                    }
+                }
+                while (numero != 0)
+                {                   
+                    if (int.TryParse(Console.ReadLine(), out numero) == false)
+                    {
+                        bool var = false;
+                        while (var == false)
+                        {
+                            Console.WriteLine("São aceitos apenas números inteiros");
+                            var = int.TryParse(Console.ReadLine(), out numero) == true;
+                        }
+                    }
+                    if (numero % 2 == 0 && numero != 0)
+                    {
+                        pares++;
+                    }
+                    Array.Resize(ref lista, lista.Length + 1);
+                    lista[lista.Length - 1] = numero;
+
+                }
+                Console.WriteLine(lista.Length);
+                Console.WriteLine(lista.Sum());
+                Console.WriteLine(pares);
+            }
+        }
+    
+        static void Teste2()
+        {
+            double numero = 123.4567;
+            Console.WriteLine(String.Format("{0:0.00}", numero));
         }
     }
 }
+
