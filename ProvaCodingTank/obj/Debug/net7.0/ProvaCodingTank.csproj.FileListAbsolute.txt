@@ -1,0 +1,14 @@
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\bin\Debug\net7.0\ProvaCodingTank.exe
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\bin\Debug\net7.0\ProvaCodingTank.deps.json
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\bin\Debug\net7.0\ProvaCodingTank.runtimeconfig.json
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\bin\Debug\net7.0\ProvaCodingTank.dll
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\bin\Debug\net7.0\ProvaCodingTank.pdb
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ProvaCodingTank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ProvaCodingTank.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ProvaCodingTank.AssemblyInfo.cs
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ProvaCodingTank.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ProvaCodingTank.dll
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\refint\ProvaCodingTank.dll
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ProvaCodingTank.pdb
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ProvaCodingTank.genruntimeconfig.cache
+C:\Users\danie\source\repos\CodingTank\ProvaCodingTank\obj\Debug\net7.0\ref\ProvaCodingTank.dll
